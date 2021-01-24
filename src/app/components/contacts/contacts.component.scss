@@ -1,0 +1,56 @@
+@import '../../../config';
+.contact {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:
+    linear-gradient(
+        to bottom,
+        rgba($primary-color, 0.7),
+        rgba($primary-color, 0.1)
+    ),
+     url('../../../assets/images/model-3.jpg') center top;
+    background-size: cover;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .social-icons{
+        p{
+        position: initial;
+        margin-top: 2rem;
+        }
+    }
+ 
+}
+
+.text-secondary {
+    h5 {
+    text-shadow: 2px 2px 2px 5px gray;
+    }
+}
+
+@include media-md { 
+    .contact__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@include media-lg {
+    .contact__list {
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}

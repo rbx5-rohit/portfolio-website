@@ -1,0 +1,33 @@
+<div class="header-div">
+<div class="menu-btn" #menuBtn >
+    <span (click)="toggleMenu()" class="menu-btn_burger"  [ngClass]="{open: showMenu}"></span>
+</div>
+
+<nav class="nav" [ngClass]="{open: showMenu}">
+    <ul class="menu-nav" [ngClass]="{open: showMenu}">
+        <li (click)="navLinkClick(1)" class="menu-nav__item heavy-white" [ngClass]="{open: showMenu, active: navLink.home, heavy: navLink.home}">
+           <a routerLink="home" class="menu-nav_link ">
+               Home
+           </a> 
+        </li>
+        <li (click)="navLinkClick(2)" class="menu-nav__item heavy-white" [ngClass]="{open: showMenu, active: navLink.project}">
+            <a routerLink="projects" class="menu-nav_link">
+                My Projects
+            </a> 
+         </li>
+        <li (click)="navLinkClick(3)" class="menu-nav__item heavy-white" [ngClass]="{open: showMenu, active: navLink.about}">
+           <a routerLink="about" class="menu-nav_link">
+               About Me
+           </a> 
+        </li>
+        <li (click)="navLinkClick(4)" class="menu-nav__item heavy-white" [ngClass]="{open: showMenu, active: navLink.contact}">
+           <a routerLink="contacts" class="menu-nav_link">
+               Contact Me
+           </a> 
+        </li>
+    </ul>
+</nav>
+</div>
+<main>
+    <router-outlet></router-outlet>
+</main>
